@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'homework';
+  hide:boolean = false;
+  title = 'front1';
+  onclick():void{
+    this.hide = true;
+  }
+  test(){
+    alert("clicked");
+  }
+  update(){
+    let val = '';
+    // @ts-ignore
+    val = document.getElementById("id").innerText;
+    // @ts-ignore
+    document.getElementById("id").innerText = 'updated content';
+    console.log(val);
+  }
 }
